@@ -1,7 +1,7 @@
 {
   "name": "@wwei/components",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wwei/hooks": "^1.0.0"
+    "@wwei/hooks": "^0.0.1"
   }
 }
