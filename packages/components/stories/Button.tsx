@@ -39,7 +39,7 @@ export const Button = ({
       type="button"
       // className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
       className={cn(
-        "border-2 border-cyan-600 bg-orange-400 p-4 pt-2 text-amber-300 "
+        "border-2 border-cyan-600 bg-orange-400 p-4 pt-2 text-slate-50 dark:text-cyan-400"
       )}
       style={{ backgroundColor }}
       {...props}
