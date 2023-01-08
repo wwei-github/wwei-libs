@@ -1,5 +1,27 @@
 import "../packages/components/index.css";
 import { themes } from '@storybook/theming';
+import { addDecorator } from '@storybook/react'
+import {
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+// Initialize MSW
+initialize();
+// Provide the MSW addon decorator globally
+export const decorators = [mswDecorator];
+
+
+const queryClient = new QueryClient({
+  // staleTime:Infinity,
+  // cacheTime:Infinity,
+  // refetchOnWindowFocus:false
+})
+
+addDecorator(stories=>(
+  <QueryClientProvider client={queryClient}>{stories()}</QueryClientProvider>
+))
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

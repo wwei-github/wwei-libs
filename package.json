@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
@@ -29,6 +29,8 @@
     "autoprefixer": "^10.4.8",
     "babel-loader": "^8.2.5",
     "lerna": "^5.3.0",
+    "msw": "^0.44.2",
+    "msw-storybook-addon": "^1.6.3",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
@@ -38,8 +40,13 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.2.1",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
